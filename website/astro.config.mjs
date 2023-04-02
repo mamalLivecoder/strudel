@@ -12,7 +12,7 @@ import tailwind from '@astrojs/tailwind';
 import AstroPWA from '@vite-pwa/astro';
 // import { visualizer } from 'rollup-plugin-visualizer';
 
-const site = 'https://mamalLivecoder.github.io';
+const site = 'https://mamallivecoder.github.io';
 const base = '/strudel'; // base path of the strudel site
 
 // this rehype plugin converts relative anchor links to absolute ones
