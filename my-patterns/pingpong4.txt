@@ -1,7 +1,3 @@
-// pattern ping pong
-
-setcps(.5)
-
 stack(
   "<0 3 5 2 7 3 9>/2"
   .layer(

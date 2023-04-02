@@ -1,5 +1,3 @@
-setcps(.5)
-
 stack(
   "<0 3 5 2 7 3 9>/2"
   .almostNever(echoWith(4, 1/8, (p,n) => p.add(n*2).pan(-1)))
