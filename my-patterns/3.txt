@@ -1,0 +1,5 @@
+stack(
+  "c2".note().struct("1 0 1? 1? 0 0 1? 1?").s("bd").n(54),
+  s("~ sd").early("<.125 0>").n(51).gain(.6).when("<0!3 1>", x => x.struct("1*8").degrade().palindrome()),
+  s("hh*4").mask("[0 1]*2").n("<556!7 558>").gain(.37).late(.01),
+)
