@@ -1,0 +1,5 @@
+stack(
+  "c2".note().struct("1 0 <0 1>").s("bd").n(51),
+  s("~ sd").early(.01).n(50).gain(.6),
+  s("hh*4").late(".001 .01 .001 .01").n(55).striate(2).release(.1).attack(.01).gain(.25).iter(4),
+)
