@@ -1,0 +1,7 @@
+stack(
+  "c2".note().struct("<1(3,8) ~> ~").s("bd").n("[18,22]").when("<0 0 <0!3 1> 1>", x => x.palindrome()),
+  s("~ sd").n(28).gain(.7),
+  s("hh*4").mask("[0 1]*2").gain(.28).fast(2).speed("[1|.75]*8").legato(.3).clip(1),
+  s("perc/8").n(3).gain(.25).delay(.4).orbit(2).pan(.1),
+  s("perc*2").striate(4).degrade().n(5).jux(rev).gain(.25)
+)
