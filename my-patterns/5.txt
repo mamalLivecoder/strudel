@@ -1,0 +1,18 @@
+stack(
+  "c2".note().struct("1 0 <0!3 1> 0 0 0 0 <0!2 1 0>").s("bd:{19,0}").late("[0 0.07]*2"),
+  
+  "c2"
+    .note()
+    .struct("0 0 0 0 1 0 0 <0!3 [1?|1?*2]>")
+    // .layer(
+      // x => x.s("sd:2").gain(.9) // .hpf(300)
+    // )
+    .s("sd:5")
+    .room(.03)
+    .orbit(2)
+    .late("[0 0.07]*2")
+    .gain(.8)
+  ,
+  
+  s("hh*4").gain(".2 .25".fast(2)).late("[0 0.04]*2").hpf(sine.range(2000,3000).slow(perlin.range(1,5).segment(32)))
+)
