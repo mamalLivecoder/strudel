@@ -13,6 +13,8 @@ stack(
     .late("[0 0.07]*2")
     .gain(.8)
   ,
+
+  "c2".note().struct("1*8").s("sd:10").gain(.1).late("[.002 0.04]*4").mask("1 1 1 1 0 1 1 1").degrade(),
   
-  s("hh*4").gain(".2 .25".fast(2)).late("[0 0.04]*2").hpf(sine.range(2000,3000).slow(perlin.range(1,5).segment(32)))
+  s("hh*4").gain(".2 .25".div(2).fast(2)).late("[.01 0.04]*2").hpf(sine.range(2000,3000).slow(perlin.range(1,5).segment(32)))
 )
