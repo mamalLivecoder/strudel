@@ -1,0 +1,41 @@
+stack(
+  "<0 3 5 2 7 3 9>/2"
+  .layer(
+    x=>x.off(1/2, add(4))
+      .scale("F:minor").note()
+      .jux(rev)
+      .s("gm_epiano1").room(.5)
+      .attack(perlin.range(0,1))
+      .cutoff(perlin.range(400,4000)),
+    x=>x.scale("F1:minor F1:minor <C1:minor Ab1:major>").note()
+      .s("gm_electric_bass_pick")
+      .struct("x x(<3 2 1>,<8 7 11 13>)")
+      .decay(.25).sustain(0.5),
+    x=>x.scale("F2:minor").note()
+      .s("gm_vibraphone")
+      .struct("x x(<4 <2 3>>,<8 5 <7 11>>)")
+      .delay(1/8).decay(.2)
+      .sustain(0).decay(.2)
+      .release(0).attack("<.15 0.05 .1>*2")
+  ),
+  s("<~!8 [cp(3,8)]!8>").bpf(500).room(.3).sometimesBy(.22,echo(4,1/8,.7)),
+  s("oh*8").lpf(sine.range(300,800)),
+
+  s("{bd ~ sd}%{6 [8 1]}%2")
+  .bank('RolandTR707')
+  .lpf(4000)
+  .gain(0.6),
+  
+  s("hh({3 5 1}%2.5,16,2)").slow("1,2,4")
+  .gain(sine.range(.5,.95).fast(7))
+  .speed("{0.5 0.333 ~ 0.225}%4")
+  .bank('RolandTR909')
+  .jux(fast(0.5))
+  .room("0.3:2")
+  .hpf(4900)
+  .orbit(2),
+
+  s("woodblock:5").struct("<~ x(<3 5>,<8 12 16>)>").pan(sine.slow(16)),
+  s("bd*2").lpf(sine.range(100,500)).when("<0!15 1>", x => x.fast("1 2 4 8"))
+)
+

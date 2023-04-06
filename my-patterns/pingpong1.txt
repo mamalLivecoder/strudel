@@ -1,0 +1,8 @@
+stack(
+  "<0 3 5 2 7 3 9>/2"
+  .off(1/2, add(4))
+  .scale("F:minor").note()
+  .jux(rev)
+  .s("gm_epiano1").room(.5)
+)
+
