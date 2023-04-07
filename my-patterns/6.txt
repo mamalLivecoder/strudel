@@ -1,0 +1,14 @@
+stack(
+  "c2"
+    .note()
+    .struct(cat("1 0 0 [0 1]", "0 0 1 1", "0", "[0 1] 0 1 1"))
+    .s("bd").n(9),
+  s("~ <sd ~>").n(8),
+  s("hh*8")
+    .gain(sine.range(.1,.21).late(1/4))
+    .n(11)
+    .mask(cat("1 0 0 0", "0 0 1 1", "0", "0 0 1 1").invert())
+    .legato(.5)
+    .clip(1)
+    .begin(.1),
+)
